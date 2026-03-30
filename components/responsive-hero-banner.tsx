@@ -119,8 +119,9 @@ const ResponsiveHeroBanner: React.FC<ResponsiveHeroBannerProps> = ({
             <a
               href="#"
               className="inline-flex items-center justify-center bg-center w-[100px] h-[40px] bg-cover rounded"
-              style={{ backgroundImage: `url(${logoUrl})` }}
-            />
+            >
+              <h3 className="text-lg font-bold text-white">AeroCleanse</h3>
+            </a>
 
             <nav className="hidden md:flex items-center gap-2">
               <div className="flex items-center gap-1 rounded-full bg-white/5 px-1 py-1 ring-1 ring-white/10 backdrop-blur">
@@ -280,7 +281,7 @@ const ResponsiveHeroBanner: React.FC<ResponsiveHeroBannerProps> = ({
             </div>
           </div>
 
-          <div className="mx-auto mt-20 max-w-5xl">
+          <div className="mx-auto mt-48 max-w-5xl">
             <p className="animate-fade-slide-in-1 text-sm text-white/70 text-center">
               {partnersTitle}
             </p>

@@ -8,6 +8,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import GarbageDetection from "@/components/GarbageDetection";
 import { Sidebar, SidebarBody, SidebarLink } from "./sidebar";
 import {
   IconArrowLeft,
@@ -38,7 +39,7 @@ export function DashBoardMain({ initialView }: { initialView?: string }) {
         <IconBrandTabler className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
       ),
     },
-    
+     
     {
       label: "Alert System Monitoring",
       onClick: () => setActiveView("Agent1"),
@@ -67,6 +68,11 @@ export function DashBoardMain({ initialView }: { initialView?: string }) {
         <IconMap2 className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
       ),
     },
+    {
+  label: "Garbage Detection",
+  onClick: () => setActiveView("garbage"),
+  icon: <IconEye className="h-5 w-5" />,
+},
     {
       label: "Mission-Planner (Agent5)",
       onClick: () => setActiveView("mission-planner"),
@@ -226,6 +232,11 @@ const Dashboard = ({ activeView }: { activeView: string }) => {
             <Agent4 />
           </div>
         )}
+        {activeView === "garbage" && (
+  <div className="-m-6 md:-m-10 flex-1">
+    <GarbageDetection />
+  </div>
+)}
         {activeView === "mission-planner" && <MissionPlanner />}
         {activeView === "overview" && (
           <div className="flex-1 h-full">

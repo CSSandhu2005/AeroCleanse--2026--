@@ -57,7 +57,7 @@ export default function MissionPlanner() {
       return;
     }
 
-    const res = await fetch("https://tanvipatel0211.app.n8n.cloud/webhook/8856398e-b673-4159-9c4c-4238707dbd68", {
+    const res = await fetch("http://localhost:5678/webhook/generate-path", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
