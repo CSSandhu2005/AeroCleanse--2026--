@@ -1,16 +1,17 @@
-// components/theme-provider.tsx
-"use client"
-import * as React from "react"
-import { ThemeProvider as NextThemesProvider } from "next-themes"
+"use client";
 
-export function ThemeProvider({ children, ...props }: React.ComponentProps<typeof NextThemesProvider>) {
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { ReactNode } from "react";
+
+export function ThemeProvider({ children }: { children: ReactNode }) {
   return (
     <NextThemesProvider
-      {...props}
-      storageKey="theme-preference"
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
       disableTransitionOnChange
     >
       {children}
     </NextThemesProvider>
-  )
+  );
 }

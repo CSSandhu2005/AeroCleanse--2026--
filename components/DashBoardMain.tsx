@@ -24,7 +24,7 @@ import { cn } from "@/lib/utils";
 import { UserButton, useUser } from "@clerk/nextjs";
 import { IconEye } from "@tabler/icons-react";
 import { Agent2 } from "@/components/Agent2";
-import { Agent3 } from "@/components/spray/Agent3";
+import { Agent3 } from "@/components/Agent3";
 import { CommandCenter } from "./command/CommandCenter";
 import MissionPlanner from "@/components/MissionPlanner";
 import Agent4 from "./Agent4";
@@ -55,7 +55,7 @@ export function DashBoardMain({ initialView }: { initialView?: string }) {
       ),
     },
     {
-      label: "Agent3",
+      label: "Garbage HeatMap",
       onClick: () => setActiveView("Agent3"),
       icon: (
         <IconCpu className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
@@ -169,7 +169,7 @@ export const Logo = () => {
         animate={{ opacity: 1 }}
         className="font-medium whitespace-pre text-black dark:text-white"
       >
-        AgroSentry
+        AeroCleanse
       </motion.span>
     </a>
   );
