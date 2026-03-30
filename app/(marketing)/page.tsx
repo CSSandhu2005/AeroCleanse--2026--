@@ -10,11 +10,12 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import ResponsiveHeroBanner from "@/components/responsive-hero-banner";
 
 export default function Home() {
   return (
     <div className="min-h-screen ">
-      <NavBar />
+      <ResponsiveHeroBanner />
     </div>
   );
 }

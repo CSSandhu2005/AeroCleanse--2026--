@@ -40,7 +40,7 @@ export function DashBoardMain({ initialView }: { initialView?: string }) {
     },
     
     {
-      label: "Agent1",
+      label: "Alert System Monitoring",
       onClick: () => setActiveView("Agent1"),
       icon: (
         <IconDrone className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />

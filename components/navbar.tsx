@@ -108,54 +108,7 @@ export const NavBar = () => {
                   ))}
                 </ul>
               </div>
-              <div className="flex w-full flex-col items-center space-y-3 sm:flex-row sm:gap-2 sm:space-y-0 md:w-fit">
-                {/* 1. STATE: USER IS LOGGED OUT */}
-                <SignedOut>
-                  <SignInButton>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className={cn(isScrolled && "lg:hidden")}
-                    >
-                      Login
-                    </Button>
-                  </SignInButton>
-
-                  <SignUpButton>
-                    <Button size="sm" className={cn(isScrolled && "lg:hidden")}>
-                      Sign Up
-                    </Button>
-                  </SignUpButton>
-                </SignedOut>
-
-                {/* 2. STATE: USER IS LOGGED IN */}
-                <SignedIn>
-                  {/* The Get Started button redirects to Dashboard when logged in */}
-                  <Button asChild size="sm">
-                    <Link href="/dashboard">Dashboard</Link>
-                  </Button>
-
-                  {/* User Profile & Settings */}
-                  <div className="flex items-center ml-2">
-                    <UserButton afterSignOutUrl="/" />
-                  </div>
-                </SignedIn>
-
-                {/* Optional: If you want the original "Get Started" button to show 
-         only when scrolled AND logged out (matching your original logic),
-         you can keep a separate one here. 
-         But usually, the logic above covers the UX better.
-      */}
-                <SignedOut>
-                  <Button
-                    asChild
-                    size="sm"
-                    className={cn(isScrolled ? "lg:inline-flex" : "hidden")}
-                  >
-                    <Link href="#">Get Started</Link>
-                  </Button>
-                </SignedOut>
-              </div>
+              
             </div>
           </div>
         </div>

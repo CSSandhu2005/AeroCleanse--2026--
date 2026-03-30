@@ -1,12 +1,10 @@
-// app/(dashboard)/layout.tsx
+// app/test/layout.tsx
 import "../globals.css";
 
-export default function DashboardLayout({ children }: { children: React.ReactNode }) {
+export default function TestLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark" style={{ colorScheme: 'dark' }}> 
-      <body className="bg-background text-foreground">
-        {children}
-      </body>
-    </html>
+    <div className="bg-background text-foreground">
+      {children}
+    </div>
   );
 }
