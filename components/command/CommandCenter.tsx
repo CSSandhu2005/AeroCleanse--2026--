@@ -72,7 +72,7 @@ export const CommandCenter = () => {
     }, []);
 
     return (
-        <div className="flex flex-col h-full bg-[#0d1117] text-gray-300 font-sans border-0 rounded-tl-2xl overflow-hidden">
+        <div className="flex flex-col h-full bg-[#0d1117] text-gray-300 font-sans border-0 rounded-tl-2xl overflow-hidden" suppressHydrationWarning>
             {/* 1. SYSTEM STATUS BAR (Full Width) */}
             <SystemStatusBar
                 status="ONLINE"
