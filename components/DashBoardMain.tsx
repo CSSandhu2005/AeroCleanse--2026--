@@ -39,7 +39,7 @@ export function DashBoardMain({ initialView }: { initialView?: string }) {
         <IconBrandTabler className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
       ),
     },
-     
+
     {
       label: "Alert System Monitoring",
       onClick: () => setActiveView("Agent1"),
@@ -69,10 +69,10 @@ export function DashBoardMain({ initialView }: { initialView?: string }) {
       ),
     },
     {
-  label: "Garbage Detection",
-  onClick: () => setActiveView("garbage"),
-  icon: <IconEye className="h-5 w-5" />,
-},
+      label: "Garbage Detection",
+      onClick: () => setActiveView("garbage"),
+      icon: <IconEye className="h-5 w-5" />,
+    },
     {
       label: "Mission-Planner (Agent5)",
       onClick: () => setActiveView("mission-planner"),
@@ -192,7 +192,6 @@ const Dashboard = ({ activeView }: { activeView: string }) => {
   const [regionScore, setRegionScore] = useState(0);
   const hasCritical = data.some((item) => item.risk === "High");
 
-
   return (
     <div className="flex flex-1">
       <div
@@ -233,10 +232,10 @@ const Dashboard = ({ activeView }: { activeView: string }) => {
           </div>
         )}
         {activeView === "garbage" && (
-  <div className="-m-6 md:-m-10 flex-1">
-    <GarbageDetection />
-  </div>
-)}
+          <div className="-m-6 md:-m-10 flex-1">
+            <GarbageDetection />
+          </div>
+        )}
         {activeView === "mission-planner" && <MissionPlanner />}
         {activeView === "overview" && (
           <div className="flex-1 h-full">

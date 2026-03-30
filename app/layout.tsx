@@ -1,7 +1,7 @@
 import { type Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Geist, Geist_Mono } from "next/font/google";
-import '@/app/globals.css';
+import "@/app/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = Geist({
@@ -16,7 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "AeroCleanse - Illegal Garbage Dumping Detection",
-  description: "AI-powered drone surveillance system for detecting and monitoring illegal garbage dumping",
+  description:
+    "AI-powered drone surveillance system for detecting and monitoring illegal garbage dumping",
 };
 
 export default function RootLayout({
@@ -27,12 +28,8 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-            {children}
-          </ThemeProvider>
+        <body>
+          <ThemeProvider>{children}</ThemeProvider>
         </body>
       </html>
     </ClerkProvider>

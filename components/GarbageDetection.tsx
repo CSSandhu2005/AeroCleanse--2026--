@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import HeatmapIncidentReportCard from "./heat-map-middle";
 
 export default function GarbageDetection() {
   const [data, setData] = useState({
